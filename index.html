@@ -1,0 +1,124 @@
+<html>
+<head>
+<style type="text/css">
+.btn {
+    background-color: #f2f2f2;
+        border: 1px solid #f2f2f2;
+	    border-radius: 2px;
+	        color: #757575;
+		    cursor: default;
+		        font-family: arial,sans-serif;
+			    font-size: 13px;
+			        font-weight: bold;
+				    margin: 11px 4px;
+				        min-width: 54px;
+					    padding: 0 16px;
+					        text-align: center;
+						    line-height: 27px;
+						        }
+								
+								.btn:hover {
+									border: 1px solid #000000;
+									}
+
+									tr{
+									height:30px;
+									}	
+
+
+
+									div {
+										padding-bottom:10px;
+										}
+
+
+										</style>
+
+
+										<script type="text/javascript">
+
+										/* validate function checks whether input fields are provided with values and throws an alert otherwise */
+										var validate = function() {
+											var number1 =document.getElementById('number1').value; 
+												var number2 =document.getElementById('number2').value;
+													if(!number1 || !number2 ) {
+															alert("Please provide input values ...");
+																	return false;
+																		}
+																			return true;
+																			};
+
+
+																			var add = function(calculate){
+																				if(validate()) {
+																					var number1 =document.getElementById('number1').value; 
+																						var number2 =document.getElementById('number2').value; 
+																							var res = +number1 + +number2;
+																								document.getElementById('calculate').innerHTML= "<b>OUTPUT : </b>"+ res;
+																									}
+																									};
+
+																									var sub = function(calculate){
+																										var number1 =document.getElementById('number1').value; 
+																											var number2 =document.getElementById('number2').value; 
+																												var res = +number1 - +number2;
+																													document.getElementById('calculate').innerHTML= "<b>OUTPUT : </b>"+ res; 
+																													};
+
+																													var multi = function(calculate){
+																														var number1 =document.getElementById('number1').value; 
+																															var number2 =document.getElementById('number2').value; 
+																																var res = +number1 * +number2;
+																																	document.getElementById('calculate').innerHTML= "<b>OUTPUT : </b>"+ res;
+																																	};
+
+																																	var div = function(calculate){
+																																		var number1 =document.getElementById('number1').value; 
+																																			var number2 =document.getElementById('number2').value; 
+																																				if (number2!=0) {
+																																						var res = +number1 / +number2;
+																																								document.getElementById('calculate').innerHTML= "<b>OUTPUT : </b>"+ res;
+																																									} else {alert("Can't perform division by zero ...");}
+																																									};
+																																									 
+																																									 </script>
+																																									  
+																																									  </head>
+
+
+																																									  <body bgcolor="#FFFFFF">
+																																									  <H1 align=center>ARITHMETIC CALCULATION</H1>
+																																									  <br/>	
+																																									  <br/>
+																																									  <br/>
+
+																																									  <div class ="d1">
+																																									  	<table>
+																																												<tr>
+																																															<th>1st Number: </th>
+																																																		<td><input type="text" id="number1"></td>
+																																																				</tr>
+																																																						
+																																																								<tr>
+																																																											<th>2nd Number: </th>
+																																																														<td><input type="text" id="number2"></td>
+																																																																</tr>
+																																																																	</table>
+																																																																	</div>
+																																																																	<div class ="d3">	
+																																																																		<table>
+																																																																				<tr>
+																																																																							<td><button class="btn" type="button" onclick="add()">ADD</button></td>
+																																																																										<td><button class="btn" type="button" onclick="sub()">DIFFERENCE</button></td>
+																																																																													<td><button class="btn" type="button" onclick="multi()">MULTIPLY</button></td>
+																																																																																<td><button class="btn" type="button" onclick="div()">DIVIDE</button></td>
+																																																																																		</tr>
+																																																																																			</table>
+																																																																																			</div>
+
+																																																																																			<div class ="d4">
+																																																																																			<div id="calculate"><b>OUTPUT : </b></div> 
+																																																																																			</div>
+
+																																																																																			</body>
+																																																																																			</html>
